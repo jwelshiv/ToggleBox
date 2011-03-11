@@ -46,14 +46,14 @@
 
 					newMargin = $(this).parent().width() - $(this).width() + 'px';
 
-					$(this).animate({marginLeft: newMargin}, 500, function(){
+					$(this).animate({marginLeft: newMargin}, 200, function(){
 						$(this).closest('.toggleSwitch').removeClass('on').addClass("off");
 						$(this).closest('.toggleSwitch').prev().removeAttr("checked");
 					});
 
 				}else{
 
-					$(this).animate({marginLeft: '0'}, 500, function(){
+					$(this).animate({marginLeft: '0'}, 200, function(){
 						$(this).closest('.toggleSwitch').removeClass('off').addClass("on");
 						$(this).closest('.toggleSwitch').prev().attr("checked","checked");
 					});

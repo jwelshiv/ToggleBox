@@ -2,55 +2,75 @@
 /* Styles for positioning, animation */
 
 div.toggleSwitch{
-	overflow: auto;
-	margin: 0 auto;
 	position: relative;
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
+    background:#00a8ff;
+    border:1px solid rgba(0,0,0,0.4);
+    overflow:hidden;
+    clear:both;
+    padding:1px 0;
+	width:60px; 
+	height:20px;
+}
+
+div.toggleSwitch{
+    -webkit-border-radius:  4px;
+    -moz-border-radius:	    4px;
+    border-radius:	    4px;
+}
+
+div.toggleSwitch{
+	background: #00a8ff -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%) top left no-repeat; /* firefox */
+    background: #00a8ff -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0092e2), color-stop(100%,#00c5ff)) top left no-repeat; /* webkit */
 }
 
 div.toggleSwitch span.onLabel, div.toggleSwitch span.offLabel{
 	line-height: 24px;
-	font-size: 12px;
+	font-size: 10px;
 	padding: 0 5px;
-	float: left;
+	position:absolute;
+    color:#fff;
+    -moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
 }
+div.toggleSwitch span.onLabel{right:0;}
+div.toggleSwitch span.offLabel{left:0;}
 
 div.toggleSwitch div.switchArea{
-	float: left;
-	width: 64px;
-	height: 24px;}
+	display:block;}
 
 div.toggleSwitch span.switchHandle{
-	display: block;
-	width: 30px;
+    position:absolute; 
+    top: 0; 
+    left: 0;
+	width: 40%;
 	height: 100%;
 	cursor: pointer;
 	cursor: hand;
-	margin-left: 0;}
+    background:#ededed;
+	border:1px solid rgba(0,0,0,0.4);
+    border-top:1px solid #fff;
+    border-bottom:1px solid #aaa;
+	z-index:100;}
 
+/* border-radius */
+div.toggleSwitch span.switchHandle{
+    -webkit-border-radius:  4px;
+    -moz-border-radius:	    4px;
+    border-radius:	    	4px;}
 
-/* Default Skin */
-
-div.toggleSwitch{
-	font-family: helvetica, arial, sans-serif;}
-
-div.toggleSwitch span.switchHandle{	background: #aaa url("images/toggle.handle_left-bg.png") top left no-repeat;}
-div.toggleSwitch.off span.switchHandle{	background-image: url("images/toggle.handle_right-bg.png");}
-
-
-div.toggleSwitch div.switchArea{ 
-	background: #5bb554 url("images/toggle.shadow-bg.png") top left no-repeat;
-	border: 1px solid #555;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;}
-div.toggleSwitch.off div.switchArea{ background-color: #F8837C;}
-
+/* gradients */
+div.toggleSwitch span.switchHandle{
+    background: #ffffff -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0.1) 100%) top left no-repeat; /* firefox */
+    background: #ffffff -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.4) ), color-stop(100%,rgba(255,255,255,0.3))) top left no-repeat; /* webkit */}
 
 div.toggleSwitch span.onLabel, div.toggleSwitch span.offLabel{ text-transform: uppercase; color: #333;}
-div.toggleSwitch span.onLabel, div.toggleSwitch.off span.offLabel{ color: #333;}
-div.toggleSwitch.off span.onLabel, div.toggleSwitch span.offLabel{ color: #ccc;}
+div.toggleSwitch span.onLabel, div.toggleSwitch.off span.offLabel{ color: #fff;}
+div.toggleSwitch.off span.onLabel, div.toggleSwitch span.offLabel{ color: #aaa;}
 
-	
+
+
+
